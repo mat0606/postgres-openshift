@@ -1,0 +1,30 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+   name: example-kc
+spec:
+   instances: 1
+   serverConfiguration:
+   - name: db
+     value: postgres
+   - name: db-url-host
+     value: hippo-primary
+   - name: db-username
+     secret:
+       name: hippo-pguser-hippo
+       key: user
+   - name: db-password
+     secret:
+       name: hippo-pguser-hippo
+       key: password
+   - name: db-url
+     secret:
+       name: hippo-pguser-hippo
+       key: jdbc-uri
+   http:
+     tlsSecret: example-tls-secret
+   hostname:
+     hostname: test.keycloak.org
+   #hostname: "INSECURE-DISABLE" apply for KeyCloak Operator version 20 & below (https://www.keycloak.org/2022/11/keycloak-2000-released)
+   #tlsSecret: "INSECURE-DISABLE"
+   #disableDefaultIngress: true
