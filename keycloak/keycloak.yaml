@@ -22,9 +22,10 @@ spec:
        name: hippo-pguser-hippo
        key: jdbc-uri
    http:
-     tlsSecret: example-tls-secret
+   #  tlsSecret: example-tls-secret
+     httpEnabled: true
+     httpPort: 80
    hostname:
-     hostname: test.keycloak.org
-   #hostname: "INSECURE-DISABLE" apply for KeyCloak Operator version 20 & below (https://www.keycloak.org/2022/11/keycloak-2000-released)
-   #tlsSecret: "INSECURE-DISABLE"
-   #disableDefaultIngress: true
+   #  hostname: test.keycloak.org
+     strict: false
+     strictBackchannel: false
