@@ -23,11 +23,10 @@ spec:
        key: jdbc-uri
    http:
      httpEnabled: true
-    # httpPort: 80
-    # httpsPort: 443
-    # tlsSecret: example-tls-secret
+     httpPort: 80
+     httpsPort: 443
+     tlsSecret: example-tls-secret
    hostname:
-    # hostname: example-kc-service-postgres1.apps.ocp2ipi.ntnxlab.local 
+     hostname: example-kc-service-postgres1.apps.ocp2ipi.ntnxlab.local 
      strict: false
      strictBackchannel: false
-     #hostname-strict-https: false
