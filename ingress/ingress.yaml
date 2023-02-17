@@ -4,7 +4,7 @@ metadata:
   name: keycloak-openshift
 spec:
   rules:
-  - host: example-kc-service-postgres1.apps.ocp2ipi.ntnxlab.local 
+  - host: example-kc-service-postgres1.apps.micatscale.ntnxlab.local 
     http:
       paths:
       - backend:
