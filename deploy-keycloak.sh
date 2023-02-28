@@ -16,4 +16,3 @@ echo "Exposing route"
 # Use this for OpenShift 4.11
 sleep 5
 oc -n postgres1 expose svc example-kc-service
-oc -n postgres1 get route
